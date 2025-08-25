@@ -1,4 +1,3 @@
-# main_ackermann_cpp_terminal_speed.py
 import math, time
 import numpy as np
 import matplotlib.pyplot as plt
@@ -57,7 +56,6 @@ def find_lookahead_point_from(path, pos, lookahead, start_seg, heading, max_seg_
     hx, hy = heading
     n = len(path)
     candidates = []
-
     end_seg = min(n - 1, start_seg + max_seg_look)
     for i in range(start_seg, end_seg):
         x1, y1 = path[i]
@@ -66,13 +64,11 @@ def find_lookahead_point_from(path, pos, lookahead, start_seg, heading, max_seg_
         a = dx * dx + dy * dy
         if a < 1e-12:
             continue
-
         b = 2 * (dx * (x1 - px) + dy * (y1 - py))
         c = (x1 - px) ** 2 + (y1 - py) ** 2 - lookahead ** 2
         disc = b * b - 4 * a * c
         if disc < 0:
             continue
-
         sqrt_disc = math.sqrt(disc)
         t_candidates = [(-b - sqrt_disc) / (2 * a), (-b + sqrt_disc) / (2 * a)]
         for t in t_candidates:
@@ -80,11 +76,9 @@ def find_lookahead_point_from(path, pos, lookahead, start_seg, heading, max_seg_
                 lx, ly = x1 + t * dx, y1 + t * dy
                 if (lx - px) * hx + (ly - py) * hy > 1e-9:
                     candidates.append((i, t, np.array([lx, ly])))
-
     if candidates:
         i_best, t_best, p_best = min(candidates, key=lambda k: (k[0], k[1]))
         return p_best, i_best, t_best
-
     if start_seg < n - 1:
         x1, y1 = path[start_seg]
         x2, y2 = path[start_seg + 1]
@@ -92,7 +86,6 @@ def find_lookahead_point_from(path, pos, lookahead, start_seg, heading, max_seg_
         seg_len2 = dx * dx + dy * dy
         if seg_len2 < 1e-12:
             return find_lookahead_point_from(path, pos, lookahead, start_seg + 1, heading, max_seg_look)
-
         seg_len = math.sqrt(seg_len2)
         t0 = ((px - x1) * dx + (py - y1) * dy) / seg_len2
         t_tar = min(1.0, max(0.0, t0) + lookahead / seg_len)
@@ -102,9 +95,8 @@ def find_lookahead_point_from(path, pos, lookahead, start_seg, heading, max_seg_
             t_tar = min(1.0, t_tar + eps)
             vx, vy = x1 + t_tar * dx, y1 + t_tar * dy
         return np.array([vx, vy]), start_seg, t_tar
-
     return np.array(path[-1]), n - 2, 1.0
-
+    
 # ----- pure pursuit steering (Ackermann) -----
 def pure_pursuit_steer_from(path, rear_pos, yaw, lookahead, wheelbase, max_steer_rad, start_seg):
     heading = (math.cos(yaw), math.sin(yaw))
@@ -192,7 +184,7 @@ for _ in wheel_centers:
 
 ax.legend(loc='upper right')
 
-# ----- terminal axes di kanan -----
+# ----- terminal axes -----
 term_ax = fig.add_axes([0.85, 0.05, 0.14, 0.9])
 term_ax.axis('off')
 terminal_text = term_ax.text(0, 1.0, "", va='top', ha='left', fontsize=10, family='monospace')
@@ -287,3 +279,4 @@ def update(frame):
 
 ani = animation.FuncAnimation(fig, update, frames=10000, interval=int(DT*1000), blit=False, repeat=False)
 plt.show()
+
