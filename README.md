@@ -1,7 +1,7 @@
 # Ackermann Robot Simulation with Coverage Path Planning & Pure Pursuit
 [![Watch the video](https://img.youtube.com/vi/5JkVA1SqY-8/maxresdefault.jpg)](https://youtu.be/5JkVA1SqY-8)
 
-### [Watch this video on YouTube](https://youtu.be/5JkVA1SqY-8)
+### [2D Simulation](https://youtu.be/5JkVA1SqY-8)
 ## Overview
 [![Watch the video](https://img.youtube.com/vi/VTgKCuTHZdw/maxresdefault.jpg)](https://youtu.be/VTgKCuTHZdw)
 
