@@ -3,7 +3,9 @@
 
 ### [Watch this video on YouTube](https://youtu.be/5JkVA1SqY-8)
 ## Overview
+[![Watch the video](https://img.youtube.com/vi/VTgKCuTHZdw/maxresdefault.jpg)](https://youtu.be/VTgKCuTHZdw)
 
+### [3D Simulation](https://youtu.be/VTgKCuTHZdw)
 This project simulates a **four-wheeled Ackermann robot** (like a car) following a **Coverage Path Planning (CPP)** path using **Pure Pursuit steering**.  
 
 The robot navigates a rectangular area systematically using a **lawnmower (boustrophedon) pattern**, similar to an autonomous lawn mower or floor cleaning robot. The simulation also shows a real-time **terminal-like overlay** displaying the robot’s state, including linear and angular velocities.  
