@@ -1,12 +1,17 @@
-# Ackermann Robot Simulation with Coverage Path Planning & Pure Pursuit
+<img width="2242" height="876" alt="image" src="https://github.com/user-attachments/assets/e9750519-9b6e-47db-affb-9f3577897ec1" /># Ackermann Robot Simulation with Coverage Path Planning & Pure Pursuit
 [![Watch the video](https://img.youtube.com/vi/5JkVA1SqY-8/maxresdefault.jpg)](https://youtu.be/5JkVA1SqY-8)
 
 ### [2D Simulation](https://youtu.be/5JkVA1SqY-8)
 ## Overview
 [![Watch the video](https://img.youtube.com/vi/VTgKCuTHZdw/maxresdefault.jpg)](https://youtu.be/VTgKCuTHZdw)
 
+
 ### [3D Simulation](https://youtu.be/VTgKCuTHZdw)
-This project simulates a **four-wheeled Ackermann robot** (like a car) following a **Coverage Path Planning (CPP)** path using **Pure Pursuit steering**.  
+This project simulates a **four-wheeled Ackermann robot** (like a car) following a **Coverage Path Planning (CPP)** path using **Pure Pursuit steering**.
+
+### [Real-Time Simulation](https://youtu.be/Xy5383zTfi0...)
+[![Watch the video](<img width="2242" height="876" alt="image" src="https://github.com/user-attachments/assets/3767843b-01ce-4885-b524-f280717417d7" />
+)](https://youtu.be/Xy5383zTfi0?si=kzQywbJgIGkYQzAq)
 
 The robot navigates a rectangular area systematically using a **lawnmower (boustrophedon) pattern**, similar to an autonomous lawn mower or floor cleaning robot. The simulation also shows a real-time **terminal-like overlay** displaying the robot’s state, including linear and angular velocities.  
 
